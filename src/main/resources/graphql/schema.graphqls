@@ -1,0 +1,29 @@
+type Author {
+    id: Int
+    authorName: String
+    authorAge: Int
+    authorSex: Int
+}
+
+type BookDTO {
+    id: Int
+    bookTitle: String
+    publishedDate: String
+    publishingHouseName: String
+    author: Author
+}
+
+input BookInputDTO {
+    id: Int
+    bookTitle: String
+    publishedDate: String
+    publishingHouseName: String
+    authorId: Int
+}
+
+input AuthorInputDTO {
+    id: Int
+    authorName: String
+    authorAge: Int
+    authorSex: Int
+}

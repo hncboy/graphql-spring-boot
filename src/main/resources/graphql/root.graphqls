@@ -1,0 +1,16 @@
+type Query {
+    findAllBooks: [BookDTO]
+    findAllAuthors: [Author]
+    getBookByBookId(bookId: ID!): BookDTO
+    getAuthorByAuthorId(authorId: ID!): Author
+    findBooksByAuthorId(authorId: ID!): [BookDTO]
+}
+
+type Mutation {
+    saveAuthor(input: AuthorInputDTO!) : Author!
+    saveBook(input: BookInputDTO!) : BookDTO!
+    updateBook(input: BookInputDTO!) : BookDTO!
+    updateAuthor(input: AuthorInputDTO!) : Author!
+    deleteBook(bookId: ID!) : Boolean
+    deleteAuthor(authorId: ID!) : Boolean
+}
